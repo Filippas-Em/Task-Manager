@@ -1,0 +1,250 @@
+
+.taskItem {
+  width: 350px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 180px;
+  border-radius: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column; 
+  overflow: hidden; 
+}
+
+.taskItem h3, .taskItem p {
+  margin: 0;
+  word-wrap: break-word; 
+}
+
+.taskHeader {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.taskTitle {
+  display: flex;
+  align-items: center;
+  flex: 1; 
+}
+
+.taskButtons {
+  margin-left: auto;
+  
+}
+
+.taskButtons button {
+  margin: 0 2px;
+  background-color: white;
+  height: 41px;
+  width: 41px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none ;
+}
+
+.taskButtons button:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.taskDesc {
+  padding: 0 10px;
+  padding-top: 20px;
+  overflow-wrap: break-word;
+}
+
+.tasks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.taskList {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  min-width: 750px;
+  min-height: 500px;
+  border-radius: 30px;
+  transition: transform 0.2s ease;
+}
+
+.taskList.showForm {
+  transform: translateX(50px); 
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.listOptions {
+  display: flex;
+  margin-left: auto; 
+}
+
+.listOptions button {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  min-width: 50px;
+  justify-content: center;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.listOptions button:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: all 0.3s;
+} 
+
+#addTask {
+  margin-right: 0;
+  font-size: 15px;
+  color: white;
+  background-color: #3ea125;
+}
+
+#addTask:hover {
+  background-color: #4fbf2b;
+  cursor: pointer;
+} 
+
+#addTask span {
+  font-size: 25px;
+}
+
+#all {
+  background-color: #3a86ff ;
+  color: white;
+}
+
+.Wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 5% ;
+}
+
+.form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0; 
+  transform: scale(0.95);
+  transition: opacity 1.5s ease, transform 0.5s ease;
+  height: 300px;
+}
+
+.form.showForm {
+  opacity: 1; 
+  transform: scale(1); 
+}
+
+.taskForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.taskForm input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+}
+
+.taskForm textarea {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 200px;
+} 
+
+.taskForm button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #3a86ff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  transition: all 0.3s;
+}
+
+.taskForm button:hover {
+  background-color: #5895f8;
+  cursor: pointer;
+}
+
+#descInput {
+  height: 100px;
+}
+
+
+.filterOptions{
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  .taskList {
+    min-width: 300px;
+    margin-top: 30px;
+  }
+
+  .taskList.showForm {
+    transform: none;
+  }
+
+  .listOptions button {
+    margin-right: 10px;
+  }
+
+  #addBtnTxt {
+    display: none;
+  }
+
+  /* Modify the form style, but don't use display: none */
+  .form {
+    opacity: 0; /* Make it initially hidden */
+    height: 0;   /* Collapse the form when hidden */
+    overflow: hidden;
+    transition: opacity 0.3s ease, height 0.3s ease;
+  }
+
+  .form.showForm {
+    opacity: 1;
+    height: 300px; /* Show the form with its height */
+  }
+}
+
+
+#filterToggle {
+  box-shadow: none;
+}
+
+#addBtnTxt{
+  font-size: 10px;
+}
